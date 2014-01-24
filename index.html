@@ -37,6 +37,22 @@
 <p>2 Chainz raps some crazy lyrics. So clearly you want them everywhere.</p>
 
 <h3>
+<a name="demo" class="anchor" href="#demo"><span class="octicon octicon-link"></span></a>Demo</h3>
+<p>Here's the twochainzify code running on this page. Click, mouse, and scroll to experience 2 Chainz.</p>
+<pre><code>// Every 400px scrolled
+    twochainzify();
+
+// Every click on &lt;p&gt;
+    twochainzify('p', {'on': 'click', 'interval': 1});
+
+// Every 2nd mouseover &lt;code&gt;
+    twochainzify('code', {'on': 'mouseover', 'interval': 2});
+
+// Every mouseout on &lt;h2&gt;
+    twochainzify('h2', {'on': 'mouseout', 'interval': 1});
+</code></pre>
+
+<h3>
 <a name="what-it-does" class="anchor" href="#what-it-does"><span class="octicon octicon-link"></span></a>What it does</h3>
 
 <p>twochainzify can add 2 Chainz himself rapping on any element of your webpage.  You can configure him to rap on any DOM event including scrolling, clicks, mouseovers, etc.  You can bind him to specific elements and set how often you want him to rap.  Using base64 encoded audio, twochainzify is 100% contained in a single file.</p>
@@ -53,11 +69,15 @@
 
 <ul>
 <li>
-<code>'on'</code> (string) [default: <code>'scroll'</code>]: The DOM event</li>
+<code>'on'</code> (string): Defaults to <code>'scroll'</code> if selector is <code>window</code> or <code>null</code>, else <code>'click'</code>
 <li>
-<code>'interval'</code> (int) [default: <code>400</code> for scroll, <code>25</code> for others]: How often. For scrolling this is the number of scrolled pixels necessary to trigger 2 Chainz. For all other events this is the number of times the event is triggered.  Set to <code>1</code> to call 2 Chainz every time.</li>
-</ul><h4>
-<a name="examples" class="anchor" href="#examples"><span class="octicon octicon-link"></span></a>Examples</h4>
+<code>'interval'</code> (int) Defaults to <code>400</code>(px) for scroll, <code>10</code>(triggers) for others
+</li>
+</ul>
+
+<p><strong>Interval</strong>: For scrolling this is the number of scrolled pixels necessary to trigger 2 Chainz. For all other events this is the number of times the event is triggered.  Set to <code>1</code> to call 2 Chainz every time.</p>
+<h3>
+<a name="examples" class="anchor" href="#examples"><span class="octicon octicon-link"></span></a>Examples</h3>
 
 <p>Make 2 Chainz rap every 400 pixels scrolled:</p>
 
@@ -67,6 +87,11 @@
 <p>Every 500 pixels scrolled:</p>
 
 <pre><code>twochainzify({'interval': 500});
+</code></pre>
+
+<p>Every 10 times a <code>&lt;p&gt;</code> tag is clicked:</p>
+
+<pre><code>twochainzify('p');
 </code></pre>
 
 <p>Every time an <code>&lt;a&gt;</code> tag is moused over:</p>
@@ -96,7 +121,7 @@
 <a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h3>
 
 <p>twochainzify is released under the MIT License.
-Copyright (c) 2014 Dana Silver</p>
+Copyright (c) 2014 Dana Silver.</p>
         </section>
 
         <footer>
@@ -117,5 +142,12 @@ Copyright (c) 2014 Dana Silver</p>
 
       </div>
     </div>
+    <script src="javascripts/twochainzify.js"></script>
+    <script>
+    twochainzify();
+    twochainzify('p', {'on': 'click', 'interval': 1});
+    twochainzify('code', {'on': 'mouseover', 'interval': 2});
+    twochainzify('h2', {'on': 'mouseout', 'interval': 1});
+    </script>
   </body>
 </html>
