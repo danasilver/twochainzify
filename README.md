@@ -14,12 +14,15 @@ Call twochainzify with an optional selector and optional options:
 twochainzify([selector] [, options]);
 ```
 
-Options:
 
- - `'on'` (string) [default: `'scroll'`]: The DOM event
- - `'interval'` (int) [default: `400` for scroll, `25` for others]: How often. For scrolling this is the number of scrolled pixels necessary to trigger 2 Chainz. For all other events this is the number of times the event is triggered.  Set to `1` to call 2 Chainz every time.
+### Options
 
-#### Examples
+ - `'on'` (string): Defaults to `'scroll'` if selector is `window` or `null`, else `'click'`
+ - `'interval'` (int) Defaults to `400`(px) for scroll, `10`(triggers) for others
+
+__Interval__: For scrolling this is the number of scrolled pixels necessary to trigger 2 Chainz. For all other events this is the number of times the event is triggered.  Set to `1` to call 2 Chainz every time.
+
+### Examples
 
 Make 2 Chainz rap every 400 pixels scrolled:
 ```
@@ -55,5 +58,4 @@ Issues and pull requests are welcome.  Follow the existing syntax and run `grunt
 
 ### License
 
-twochainzify is released under the MIT License.
-Copyright (c) 2014 Dana Silver
+twochainzify is released under the MIT License. Copyright (c) 2014 Dana Silver.
