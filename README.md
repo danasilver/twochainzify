@@ -33,7 +33,7 @@ twochainzify({'interval': 500});
 
 Every time an `<a>` tag is moused over:
 ```
-twochainzify('a', {'on': 'hover', 'interval': 1});
+twochainzify('a', {'on': 'mouseover', 'interval': 1});
 ```
 
 Every 5 times a `<div class="2chainz">` is clicked:
@@ -52,3 +52,8 @@ Clone the repo and `npm install` to get the dev dependencies.
 `grunt dist` builds all the files in dist.
 
 Issues and pull requests are welcome.  Follow the existing syntax and run `grunt dist` when you're done.
+
+### License
+
+twochainzify is released under the MIT License.
+Copyright (c) 2014 Dana Silver
