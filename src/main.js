@@ -17,8 +17,15 @@ return function() {
     throw 'Invalid arguments to twochainzify: ' + args;
   }
 
-  // Default 'on' to 'scroll'
-  if (!opts.hasOwnProperty('on')) { opts.on = 'scroll'; }
+  // If 'on' is not set, set it to 'scroll' if the target
+  // is the window, else 'click'
+  if (!opts.hasOwnProperty('on')) { 
+    if (selector === window) {
+      opts.on = 'scroll';
+    } else {
+    opts.on = 'click';
+    }
+  }
 
   // Defaults for 'interval'
   if (!opts.hasOwnProperty('interval')) {
@@ -26,8 +33,8 @@ return function() {
       // 400 px scrolled
       opts.interval = 400;
     } else {
-      // 25 clicks, hovers, etc.
-      opts.interval = 25;
+      // 10 clicks, hovers, etc.
+      opts.interval = 10;
     }
   }
 

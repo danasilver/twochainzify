@@ -29,9 +29,14 @@ var twochainzify = (function() {
       throw 'Invalid arguments to twochainzify: ' + args;
     }
 
-    // Default 'on' to 'scroll'
+    // If 'on' is not set, set it to 'scroll' if the target
+    // is the window, else 'click'
     if (!opts.hasOwnProperty('on')) {
-      opts.on = 'scroll';
+      if (selector === window) {
+        opts.on = 'scroll';
+      } else {
+        opts.on = 'click';
+      }
     }
 
     // Defaults for 'interval'
@@ -40,8 +45,8 @@ var twochainzify = (function() {
         // 400 px scrolled
         opts.interval = 400;
       } else {
-        // 25 clicks, hovers, etc.
-        opts.interval = 25;
+        // 10 clicks, hovers, etc.
+        opts.interval = 10;
       }
     }
 
