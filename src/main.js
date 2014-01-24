@@ -3,7 +3,7 @@ return function() {
     , opts
     , selector
     , handler
-    , counter = 0
+    , counter = 1
     , lastOffset;
 
   // If there are no args or the first arg is the options
@@ -47,7 +47,7 @@ return function() {
     } else {
       if (counter === opts.interval) {
         playSound();
-        counter = 0;
+        counter = 1;
       } else {
         counter += 1;
       }

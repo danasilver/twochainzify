@@ -15,7 +15,7 @@ var twochainzify = (function() {
   };
   return function() {
     var args = Array.prototype.slice.call(arguments, 0),
-      opts, selector, handler, counter = 0,
+      opts, selector, handler, counter = 1,
       lastOffset;
 
     // If there are no args or the first arg is the options
@@ -61,7 +61,7 @@ var twochainzify = (function() {
       } else {
         if (counter === opts.interval) {
           playSound();
-          counter = 0;
+          counter = 1;
         } else {
           counter += 1;
         }
