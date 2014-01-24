@@ -1,0 +1,13 @@
+{
+  "name": "2chainzify",
+  "version": "0.0.0",
+  "description": "Add 2 Chainz to anything. Tru.",
+  "author": "Dana Silver <dsilver1221@gmail.com>",
+  "license": "MIT",
+  "gitHead": "72eb382a16d0359ba83af6bcda17e9cbf71db19f",
+  "devDependencies": {
+    "grunt-jsbeautifier": "~0.2.6",
+    "grunt": "~0.4.2",
+    "grunt-execute": "~0.1.5"
+  }
+}
