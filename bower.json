@@ -1,0 +1,16 @@
+{
+  "name": "twochainzify",
+  "version": "0.0.1",
+  "homepage": "https://github.com/danasilver/twochainzify",
+  "authors": [
+    "danasilver <dsilver1221@gmail.com>"
+  ],
+  "description": "Add 2 Chainz to anything, anywhere.",
+  "main": "dist/twochainzify.js",
+  "keywords": [
+    "2",
+    "two",
+    "chainz"
+  ],
+  "license": "MIT"
+}
